@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/fb4f549d69.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="image/logo.png" alt="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="header-text">
+                <p>Public Figure</p>
+                <h1>Hi, I'm <span>Aditya</span><br>Beniwal From Bhadra</h1>
+            </div>
+        </div>
+    </div>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/IMab.jpg" alt="Photo">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima non iure aspernatur, provident
+                        tempora quis impedit dolor nobis fuga necessitatibus nam rerum, voluptatum quidem.
+                        Exercitationem animi nobis voluptatum facere sunt numquam porro voluptatem vero neque libero cum
+                        accusamus, sapiente ipsa excepturi expedita veritatis minima quos earum quas! Dolore fuga
+                        impedit vitae totam quidem autem sapiente rem sunt, voluptates ipsum nisi, qui optio obcaecati
+                        veniam necessitatibus porro eaque facere corporis? Distinctio veniam ipsam voluptatum itaque
+                        doloremque dignissimos natus inventore adipisci provident magnam, doloribus.</p>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Editing</span><br>The art of producing readable text and improving existing text.</li>
+                                <li><span>Listening</span><br>An ability to be patient and understand what someone else is trying to say or express.</li>
+                                <li><span>Professionalism</span><br>Dealing with others in a courteous and professional manner.</li>
+                                <li><span>Communication</span><br>The ability to communicate effectively with clients, colleagues and external stakeholders.</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Govt Sec. Sr. School, Munsari -10<sup>th</sup></span><br>Jun 2018 - March 2019 <br> Persent :- 92%</li>
+                                <li><span>D.A.V. Sec. Sr. School, Bhadra -12<sup>th</sup></span><br>July 2020 - April 2021 <br> Persent :- 98.8% <br>Stream :- Non medical(pcm)</li>
+                            </ul>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+     <!-- Contact -->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contact-left">
+                    <h1 class="sub-title">Contact Me</h1>
+                    <p><i class="fa-solid fa-envelope"></i>adityabeniwal95@gmail.com</p>
+                    <p><i class="fa-solid fa-phone"></i>+91 73002-67155</p>
+                    <div class="social-icons">
+                        <a href="https://www.snapchat.com/add/adityabeniwal7?share_id=xrKb5xqZ174&locale=en-GB "><i class="fa-brands fa-snapchat"></i></a>
+                        <a href="https://www.instagram.com/adityabeniwalofficial"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://wa.link/0v6wdi"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://t.me/adityabeniwalofficial"><i class="fa-brands fa-telegram"></i></a>
+                    </div>
+                    <a href="#" download="" class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contact-right">
+                    <form name="submit-to-google-sheet">
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" name="Email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Aditya. Made with <i class="fas fa-heart"></i> by Ajit Poonia</p>
+        </div>
+    </div>
+    <script>
+
+        let tablinks = document.getElementsByClassName("tab-links");
+        let tabcontents = document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+
+    <script>
+        let sidemeu = document.getElementById("sidemenu");
+
+        function openmenu(){
+            sidemeu.style.right="0";
+        }
+        function closemenu(){
+            sidemeu.style.right="-200px";
+        }
+
+    </script>
+
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwl8UlxMmT5_3tKZNULtXTkaq516YkyrJSBFsiJ0HmaO9ZTdwwuaLtdWYmdJhUPZpGbXA/exec'
+    const form = document.forms['submit-to-google-sheet']
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => console.log('Success!', response))
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>
+
+</body>
+
+</html>
